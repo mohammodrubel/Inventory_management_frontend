@@ -1,22 +1,19 @@
+import BuyProduct from '../page/User/BuyProduct'
 import UserDashbord from '../page/User/UserDashbord'
 export const userPath = [
     {
-        name:'User',
+        name:'User Dashbord',
         path:'dashbord',
         element:<UserDashbord />
     },
     {
-        name:'User',
+        name:'Product Management',
         children:[
+            
             {
-                name:'Dashbord',
-                path:'dashbord',
-                element:<UserDashbord/>
-            },
-            {
-                name:'Dashbord',
-                path:'dashbord',
-                element:<UserDashbord/>
+                name:'Buy Product',
+                path:'buy-product',
+                element:<BuyProduct/>
             },
         ]
     }

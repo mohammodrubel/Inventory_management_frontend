@@ -5,7 +5,8 @@ import {SidebarRoutesGenarator} from '../utils/SidebarRoutesGenerator'
 import {adminPath} from './AdminRoute'
 import {userPath} from './UserRoute'
 import {useSelector} from 'react-redux'
-import { currentUser } from '../App/featchers/Auth/AuthSlice';
+import { currentToken, currentUser } from '../App/featchers/Auth/AuthSlice';
+import veryfyToken from '../utils/veryfyToken';
 
 
 const ROLE = {
@@ -14,9 +15,14 @@ const ROLE = {
 }
 
 function Sidebar() {
-  const {role} = useSelector(currentUser)
+
+  const token = useSelector(currentToken)
+    let user ;
+        if(token){
+            user = veryfyToken(token)
+        }
     let sidebarItems ;
-    switch(role){
+    switch(user?.role){
       case ROLE.ADMIN:
         sidebarItems = SidebarRoutesGenarator(adminPath,ROLE.ADMIN)
       break;
