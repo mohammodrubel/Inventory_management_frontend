@@ -20,12 +20,19 @@ function CreateProduct() {
     { name: 'page', value: page },
     ...params
   ]);
-  const mainData = productData?.data?.data?.result.map(({ _id, name, price, quantity, color, model, brand, category }) => ({
-    key: _id, name, price, quantity, color, model, brand, category
+  const mainData = productData?.data?.data?.result.map(({ _id, name,productPhoto, price, quantity, color, model, brand, category }) => ({
+    key: _id,productPhoto, name, price, quantity, color, model, brand, category
   }));
   
-  
   const columns = [
+    {
+      title: 'Img',
+      dataIndex: 'productPhoto',
+      key: 'productPhoto',
+      render: (item) => {
+        return <img src={item} alt="product img" />;
+      },
+    },
     {
       title: 'Name',
       dataIndex: 'name',

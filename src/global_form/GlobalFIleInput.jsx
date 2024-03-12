@@ -17,7 +17,7 @@ function GlobalFileInput({ name, type, label, required, placeholder }) {
             onChange={(e) => {
               field.onChange(e);
             }}
-            className="w-full mt-5"
+            className="w-full"
             required={required}
             placeholder={placeholder}
           />

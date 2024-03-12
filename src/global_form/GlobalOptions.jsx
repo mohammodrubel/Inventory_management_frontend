@@ -19,70 +19,86 @@ export const ColorOptions = [
         value: 'Blue',
         label: 'Blue',
     },
+    {
+        ColorOptions:'ColorOptions',
+        disabled: true,
+    }
 ]
 export const ModelOptions = [
     {
-        value: 'A-001',
-        label: 'A-001',
+        value: 'Openness',
+        label: 'Openness',
     },
     {
-        value: 'A-002',
-        label: 'A-002',
+        value: 'Explore',
+        label: 'Explore',
     },
     {
-        value: 'A-003',
-        label: 'A-003',
+        value: 'Openness',
+        label: 'Openness',
     },
     {
-        value: 'A-004',
-        label: 'A-004',
+        value: 'Conscientiousness',
+        label: 'Conscientiousness',
     },
     {
-        value: 'A-005',
-        label: 'A-005',
+        value: 'Agreeableness',
+        label: 'Agreeableness',
     },
+    {
+        ColorOptions:'ModelOptions',
+        disabled: true,
+    }
 ]
 export const BrandOptions = [
     {
-        value: 'Eco-En1',
-        label: 'Eco-En1',
+        value: 'Asta Resort',
+        label: 'Asta Resort',
     },
     {
-        value: 'Fco-Fc1',
-        label: 'Fco-Fc1',
+        value: 'Re Ona',
+        label: 'Re Ona',
     },
     {
-        value: 'Gco-Gk3',
-        label: 'Gco-Gk3',
+        value: 'Find Me Now',
+        label: 'Find Me Now',
     },
     {
-        value: 'Hco-Hk4',
-        label: 'Hco-Hk4',
+        value: 'EB Denim',
+        label: 'EB Denim',
     },
     {
-        value: 'Ico-Il5',
-        label: 'Ico-Il5',
+        value: 'Quince',
+        label: 'Quince',
     },
+    {
+        ColorOptions:'BrandOptions',
+        disabled: true,
+    }
 ]
 export const CategoryOptions = [
     {
-        value: 'C-info 1',
-        label: 'C-info 1',
+        value: 'Electronics',
+        label: 'Electronics',
     },
     {
-        value: 'C-info 2',
-        label: 'C-info 2',
+        value: 'Apparel',
+        label: 'Apparel',
     },
     {
-        value: 'C-info 3',
-        label: 'C-info 3',
+        value: 'Home Goods',
+        label: 'Home Goods',
     },
     {
-        value: 'C-info 4',
-        label: 'C-info 4',
+        value: 'Food and Beverages',
+        label: 'Food and Beverages',
     },
     {
-        value: 'C-info 5',
-        label: 'C-info 5',
+        value: 'Office Supplies',
+        label: 'Office Supplies',
     },
+    {
+        ColorOptions:'CategoryOptions',
+        disabled: true,
+    }
 ]
