@@ -4,15 +4,21 @@ import GlobalInput from "../../../global_form/GlobalInput";
 import GlobalSelectForm from "../../../global_form/GlobalSelectForm";
 import {Button} from 'antd'
 import {toast} from 'sonner'
+import { Controller } from 'react-hook-form'; 
 import { BrandOptions, CategoryOptions, ColorOptions, ModelOptions } from "../../../global_form/GlobalOptions";
 import {  useCloneProductMutation } from "../../../App/featchers/product/productApi";
+
+
 function CloneProductForm({item}) {
   const [cloneData] =useCloneProductMutation()
+
   const onSubmit = async(data) => {
+    console.log(data)
     const updateData = {
+      productPhoto: item.productPhoto,
       name: data?.name || item.name,
       category: data?.category || item.category,
-      price: Number(data?.price || item.price),
+      price: Number(data?.price || item.price), 
       quantity: Number(data?.quantity || item.quantity),
       color: data?.color || item.color,
       model: data?.model || item.model,
@@ -23,7 +29,7 @@ function CloneProductForm({item}) {
       data:updateData
     }
     const res = await cloneData(updateInfo)
-    console.log(res)
+    
     if(res?.data?.data.success){
       toast.success(res?.data?.data?.message)
     }
@@ -32,13 +38,14 @@ function CloneProductForm({item}) {
   return (
     <>
      <GlobalForm onSubmit={onSubmit}>
+        
+       
         <GlobalInput
           name="name"
           placeholder="Product Name"
           required={true}
           type="text"
           defaultValue={item.name}
-
         />
          <GlobalSelectForm
           name="category"
