@@ -7,7 +7,7 @@ import { useLoginMutation } from '../../App/featchers/Auth/AuthApi'
 import {useDispatch} from 'react-redux'
 import { setUsers } from '../../App/featchers/Auth/AuthSlice'
 import veryfyToken from '../../utils/veryfyToken'
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {toast,Toaster} from 'sonner'
 
 function Login() {
@@ -33,6 +33,16 @@ function Login() {
                 <GlobalInput label="Email" name="email" placeholder="Input Your Email" required={true} type="email" />
                 <GlobalInput label="Password" name="password" placeholder="Input Your Password" required={true} type="password" />
                 <Button htmlType='submit' className='mt-4 text-black w-full bg-white font-bold'>{isLoading ? 'processing' : "Login"}</Button>
+                <div className='text-center'><b className='text-white'>If you have no Account Please <Link to='/register'>Register</Link></b></div>
+                <div className='text-center mt-5 text-white'>
+                  ID:  admin@gmail.com <br />
+                  Pass:  admin@gmail.com
+                </div>
+                
+                <div className='text-center mt-5 text-white'>
+                  ID:  abc@gmail.com <br />
+                  Pass:  abc@gmail.com
+                </div>
             </GlobalForm>
         </div>
     </div>

@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { logout, setUsers } from '../featchers/Auth/AuthSlice';
 
 const baseQuery = fetchBaseQuery({
-    baseUrl: 'http://localhost:9000/api/v1',
+    baseUrl: 'https://inventory-management-backend-pied.vercel.app/api/v1',
     credentials: 'include',
     prepareHeaders: (headers, { getState }) => {
         const token = getState().auth.token;
@@ -19,7 +19,7 @@ const customBaseQuery =async (args,api,extraOptions)=>{
         if(result?.error?.status === 401){
             
 
-            const res = await fetch(`http://localhost:9000/api/v1/auth/refresh-token`,{
+            const res = await fetch(`https://inventory-management-backend-pied.vercel.app/api/v1/auth/refresh-token`,{
                 method:'POST',
                 credentials:'include'
             })

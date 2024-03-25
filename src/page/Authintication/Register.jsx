@@ -5,6 +5,7 @@ import GlobalInput from '../../global_form/GlobalInput'
 import {Button} from 'antd'
 import {useRegisterMutation} from '../../App/featchers/Auth/AuthApi'
 import {toast,Toaster} from 'sonner'
+import { Link } from 'react-router-dom'
 
 
 function Register() {
@@ -31,6 +32,7 @@ function Register() {
                 <GlobalInput label="Password" name="password" placeholder="Input Your Password" required={true} type="password" />
                 <GlobalInput label="Confirm Passowrd" name="confirmPassword" placeholder="Confirm Password" required={true} type="password" />
                 <Button htmlType='submit' className='mt-4 w-full bg-white font-bold'>Registration</Button>
+                <div className='text-center'><b className='text-white'>If you have already Account Please <Link to='/login'>Login</Link></b></div>
             </GlobalForm>
         </div>
     </div>
